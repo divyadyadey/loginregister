@@ -24,11 +24,13 @@ export default function Login() {
           .then(res=> {
               if(res.data==="exists"){
                   alert('login successful')
-                  history("/wel",{state:{id:email}})
+                  //history("/wel",{state:{id:email}})
+                  //history("http://localhost:53419/")
+                  window.location = ('http://localhost:56707/') 
 
               }
               else if(res.data==="does not exist"){
-                alert("User has not signed up")
+                alert("User has not registered")
               }
           })
           .catch(e=>{
@@ -43,31 +45,6 @@ export default function Login() {
       }
   }
   return(
-    /*<div className="login-wrapper">
-      <div className='login-form'> 
-        <h2>Log in</h2>
-          <form >
-            <div className="input-container">
-              <label>Email: </label>
-              <input type="email" onChange={(e)=>{setEmail(e.target.value)}}
-               name="email" id="email" placeholder='Enter email' required />
-            </div>
-            
-            <div className="input-container">
-              <label>Password: </label>
-              <input type="password" onChange={(e)=>{setPassword(e.target.value)}} 
-              name="pass" placeholder='Enter password' required />
-            </div>
-
-            <div className="button-container">
-                <button type='submit' onClick={handle}>Login</button>
-            </div>
-            <br></br>
-            <p className="forgot-password text-right">
-          Have not registered? <a href="/register">Sign Up</a></p>
-          </form>          
-      </div>
-    </div> */
     <div className='login'> 
         <div class="background">
           <div class="shap"></div>

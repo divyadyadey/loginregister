@@ -57,7 +57,7 @@ function Registration() {
 
             <label className="form__label" for="lastName">Last Name: </label>
             <input onChange={(e)=>{setLastname(e.target.value)}}
-            type="text" id="lastName"  className="form__input" placeholder="Enter LastName"/>
+            type="text" id="lastName"  className="form__input" placeholder="Enter Last Name"/>
             
             <label className="form__label" for="email">Email: </label>
             <input onChange={(e)=>{setEmail(e.target.value)}}
